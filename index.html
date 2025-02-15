@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevFolio</title>
-    <link rel="icon" type="image/png" href="./assets/logo_1693773512.6201892.png">
+    <title>Document</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 
@@ -23,7 +22,7 @@
         <section class="w-full mt-20 px-[10rem] flex justify-between items-end">
             <div class="leftheadings">
                 <h6 class="text-2xl -mb-3 tracking-tighter font-bold">Hello I am,</h6>
-                <h1 class="text-[6rem] leading-none -ml-2 tracking-tighter font-bold">Khuswant.</h1>
+                <h1 class="text-[6rem] leading-none -ml-2 tracking-tighter font-bold">Alex.</h1>
             </div>
             <div class="rightheadings flex gap-3 items-center">
                 <h4 class="tracking-tighter font-medium text-xl">[ <span class="timing">06:11 PM</span> ]
@@ -32,11 +31,12 @@
                 <h3 class="font-medium tracking-tight text-xl">Creative Front End Developer</h3>
             </div>
         </section>
-        <section class="px-[15rem] picture w-full h-[30rem] mt-20">
-            <img class="w-full h-full object-contain "
-                src="./assets/NEWTON.png"
+        <section class="px-[10rem] w-full h-[50rem] overflow-hidden relative mt-10" >
+            <img class="w-full h-full object-cover object-top translate-y-[-12rem]"
+                src="https://images.unsplash.com/photo-1739001416673-8c03d1a2d257?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="">
         </section>
+        
         <section class="about w-full px-[10rem] py-20 mt-40 flex items-center justify-center">
             <div class="relative text text-center w-2/3">
                 <img class="absolute -left-30 -top-20" src="./assets/image 222.png" alt="">
@@ -157,31 +157,12 @@
             </div>
         </section>
         <section class="footer flex justify-between px-[10rem] mt-20  py-20">
-            <h3 class="tracking-tight"><span class="font-bold">Khuswant </span><span class="font-bold">Rajpurohit</h3>
+            <h3 class="tracking-tight"><span class="font-bold">Alex</span></h3>
             <h4 class="font-medium dt">10 Feb. 2025 [07:11 PM]</h4>
         </section>
     </main>
 
-    <script>
-        function changeTime() {
-            var dt = new Date();
-            var str = dt.getHours() % 12 + ":" + dt.getMinutes();
-            dt.getHours() % 12 > 0 ? str += " PM" : str += " AM";
-            document.querySelector(".timing").textContent = str;
-        }
-
-        function changeDateAndTime() {
-            var dt2 = new Date();
-            var str = dt2.getDate() + ' / ' + (dt2.getMonth() + 1) + ' / ' + dt2.getFullYear() + "   " + dt2.getHours() % 12 + ":" + dt2.getMinutes();
-            dt2.getHours() % 12 > 0 ? str += " PM" : str += " AM";
-            document.querySelector(".dt").textContent = str;
-        }
-
-        setInterval(function () {
-            changeTime();
-            changeDateAndTime();
-        }, 1000)
-    </script>
+    <script src="index.js"></script>
 </body>
 
 </html>
